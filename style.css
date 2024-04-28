@@ -6,6 +6,9 @@
 html , body{
     height: 100%;
     width: 100%;
+    background-image: url(./photo-1713815715266-1e0ac211ab16.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 @font-face {
     font-family:font;
@@ -21,7 +24,8 @@ html , body{
 .main{
     height:100%;
     width: 100%;
-    background-color:#fff;
+    /* background-color: gray; */
+    backdrop-filter: blur(9px);
     font-family: font;
 }
 .nav{
@@ -52,8 +56,8 @@ html , body{
     padding:40px 80px;
 }
 .hero h1{
-    font-size: 3vw;
-    line-height:60px;
+    font-size: 5vw;
+    line-height:90px;
 }
 .hero_in{
     height:200px;
@@ -96,6 +100,12 @@ bottom{
     width: 100%;
 }
 @media  (max-width:600px) {
+    .main{
+        height:100%;
+        width: 100%;
+        backdrop-filter: blur(9px);
+        font-family: font;
+    }
     .nav{
         height: 60px;
         width:100vw;
@@ -104,9 +114,13 @@ bottom{
         border-bottom: 2px solid black;
     }
     .nav h4 {
-        font-size: 3vw;
+        font-size: 4vw;
         text-decoration: none;
         text-transform: capitalize;
+        transition: all ease .5s;
+    }
+    .nav h4:hover{
+        border-bottom: 2px solid gray;
     }
     .nav i {
         background-color: black;
@@ -119,11 +133,13 @@ bottom{
     }
     .hero{
         width: 100%;
+        /* background-color: red; */
         padding:20px 30px;
     }
     .hero h1{
-        font-size: 8vw;
-        line-height:30px;
+        font-size: 15vw;
+        line-height:50px;
+        margin-top: 30px;
     }
     .hero_in{
         height:200px;
@@ -131,16 +147,16 @@ bottom{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: 20px;
     }
     .hero_in p{
-        font-size:3.5vw;
+        font-size:5vw;
         font-weight: 700;
-        line-height:20px;
+        line-height:30px;
     }
     .right{
-        width: 40%;
-        margin-top:10px;
+        width: 100%;
+        /* background-color: yellow; */
+        margin-top:20%;
     }
     .elem{
         margin: 5px;
@@ -152,7 +168,8 @@ bottom{
     }
     .elem a{
         color: #000;
-        font-size: 3vw;
+        font-size: 8vw;
+        text-transform: uppercase;
         text-decoration: none;
     }
     .elem i{
@@ -162,12 +179,5 @@ bottom{
     }
     .elem:hover i{
         opacity: 1;
-    }
-    .bottom{
-        height: 49%;
-        width: 100%;
-        background-color: red;
-        background-image: url(./raphael-brasileiro-tCTyItjV0gA-unsplash.jpg);
-        background-size: cover;
     }
 }
